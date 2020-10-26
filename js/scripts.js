@@ -10,9 +10,13 @@ $(document).ready(function() {
     let newFavoriteFoods = []; 
     newFavoriteFoods.push(favoriteFoods[0], favoriteFoods[1], favoriteFoods[2]);
 
-    $("ul#foodList").append("<li>" + newFavoriteFoods[0] + "</li>");
-    $("ul#foodList").append("<li>" + newFavoriteFoods[1] + "</li>");
-    $("ul#foodList").append("<li>" + newFavoriteFoods[2] + "</li>");
+    newFavoriteFoods.forEach(function(element) {
+      $("ul#foodList").append("<li>" + element + "</li>")
+    });
+
+    // $("ul#foodList").append("<li>" + newFavoriteFoods[0] + "</li>");
+    // $("ul#foodList").append("<li>" + newFavoriteFoods[1] + "</li>");
+    // $("ul#foodList").append("<li>" + newFavoriteFoods[2] + "</li>");
 
     event.preventDefault();
   });
